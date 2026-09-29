@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ruhnevâz · Destek</title>
+<meta name="description" content="Ruhnevâz — namaz vakitleri, Kur'ân-ı Kerîm, hadis, zikir ve dua. Destek ve iletişim.">
+<link rel="icon" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <img src="icon.png" alt="Ruhnevâz">
+    <div><div class="name">Ruhnevâz</div><div class="tag tr">Ruha huzur veren</div><div class="tag en">Soothing the soul</div></div>
+    <nav class="lang"><a href="#" data-l="tr">TR</a><a href="#" data-l="en">EN</a></nav>
+  </header>
+
+  <section class="tr">
+    <h1>Destek</h1>
+    <p class="lead">Ruhnevâz; namaz vakitleri, Kur'ân-ı Kerîm, hadis, zikir ve dua için sade, reklamsız ve hesap gerektirmeyen bir İslami yaşam asistanıdır.</p>
+    <div class="card">
+      <b>Bize ulaşın</b>
+      Soru, öneri veya hata bildirimi için e-posta gönderin. Genellikle 1–2 gün içinde dönüş yapıyoruz.
+      <p style="margin:14px 0 0"><a class="btn" href="mailto:mehmettahauyarr@gmail.com?subject=Ruhnev%C3%A2z%20Destek">mehmettahauyarr@gmail.com</a></p>
+    </div>
+
+    <h2>Sık sorulan sorular</h2>
+    <h3>Namaz vakitleri hangi yönteme göre hesaplanıyor?</h3>
+    <p>Türkiye'de varsayılan yöntem Diyanet İşleri Başkanlığı'dır. Farklı ülkelerde bulunduğunuz ülkeye uygun yöntem otomatik seçilir; Namaz → Ayarlar ekranından değiştirebilirsiniz.</p>
+    <h3>Bildirimler gelmiyor.</h3>
+    <p>iPhone Ayarlar → Bildirimler → Ruhnevâz'dan izinlerin açık olduğunu kontrol edin. Uygulamayı açtığınızda bildirimler önümüzdeki günler için yeniden planlanır; ayda bir uygulamayı açmanız yeterlidir.</p>
+    <h3>İnternet olmadan çalışıyor mu?</h3>
+    <p>Evet. Kur'ân-ı Kerîm (Arapça + Diyanet meali), Buhârî ve Müslim hadis koleksiyonları uygulamanın içindedir. Namaz vakitleri bir kez indirildikten sonra çevrimdışı gösterilir. Sesli okuma ve diğer hadis koleksiyonları internet gerektirir.</p>
+    <h3>Widget nasıl eklenir?</h3>
+    <p>Ana ekranda boş bir alana basılı tutun → sol üstteki <b>+</b> → "Ruhnevâz"ı arayın. Kilit ekranı için kilit ekranına basılı tutup "Özelleştir"i seçin.</p>
+    <h3>Verilerimi yedekleyebilir miyim?</h3>
+    <p>Ayarlar → Yedekle / Geri yükle bölümünden tüm verilerinizi (hatim, kaza, kayıtlar vb.) bir dosya olarak dışa aktarabilir ve yeni cihazda içe aktarabilirsiniz.</p>
+
+    <p style="margin-top:32px"><a href="privacy.html">Gizlilik Politikası →</a></p>
+  </section>
+
+  <section class="en">
+    <h1>Support</h1>
+    <p class="lead">Ruhnevâz is a calm, ad-free Islamic companion for prayer times, the Holy Qur'an, hadith, dhikr and duas — no account required.</p>
+    <div class="card">
+      <b>Contact us</b>
+      Questions, ideas or bug reports — just send an email. We usually reply within 1–2 days.
+      <p style="margin:14px 0 0"><a class="btn" href="mailto:mehmettahauyarr@gmail.com?subject=Ruhnev%C3%A2z%20Support">mehmettahauyarr@gmail.com</a></p>
+    </div>
+
+    <h2>FAQ</h2>
+    <h3>Which calculation method is used for prayer times?</h3>
+    <p>In Türkiye the default is the Presidency of Religious Affairs (Diyanet). Elsewhere the app picks the method commonly used in your country; you can change it in Prayer → Settings.</p>
+    <h3>I'm not getting notifications.</h3>
+    <p>Check iPhone Settings → Notifications → Ruhnevâz. Reminders are rescheduled every time you open the app, so opening it at least once a month keeps them going.</p>
+    <h3>Does it work offline?</h3>
+    <p>Yes. The Qur'an (Arabic + translation) and the Bukhari and Muslim collections ship inside the app. Prayer times are available offline once downloaded. Audio recitation and the other hadith collections need a connection.</p>
+    <h3>How do I add a widget?</h3>
+    <p>Long-press an empty spot on the Home Screen → tap <b>+</b> → search "Ruhnevâz". For the Lock Screen, long-press it and choose "Customize".</p>
+
+    <p style="margin-top:32px"><a href="privacy.html#en">Privacy Policy →</a></p>
+  </section>
+
+  <footer>© 2026 Mehmet Taha Uyar · Ruhnevâz</footer>
+</div>
+<script>
+  (function () {
+    var q = location.hash === '#en' || (!location.hash && !/^tr/i.test(navigator.language || '')) ? 'en' : 'tr';
+    function set(l) { document.documentElement.lang = l; document.querySelectorAll('nav.lang a').forEach(function (a) { a.classList.toggle('on', a.dataset.l === l); }); }
+    document.querySelectorAll('nav.lang a').forEach(function (a) { a.addEventListener('click', function (e) { e.preventDefault(); set(a.dataset.l); history.replaceState(null, '', '#' + a.dataset.l); }); });
+    set(location.hash === '#tr' ? 'tr' : q);
+  })();
+</script>
+</body>
+</html>
